@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="/css/custom_project/login_page.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="loginbox">
+        <img src="http://www.vijayyadav.tk/images/avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <p th:if="${loginError}" class="error">Wrong user or password</p>
+        <form th:action="@{/login}" method="post">
+            <label for="username">Email</label>:
+            <input type="text" id="username" name="username" autofocus="autofocus"/> <br/>
+            <label for="password">Password</label>:
+            <input type="password" id="password" name="password"/> <br/>
+            <input type="submit" value="Login"/>
+        </form>
+
+            <a class="nav-link" th:href="@{/register}">
+                <input type="submit" value=" Register "/>
+            </a>
+    </div>
+</body>
+</html>
